@@ -49,33 +49,25 @@
             <div class="modal-body">
                 <div class="row">
                     <!-- Foto 1 -->
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ URL::asset('/images/fasilitas/toilet.jpeg') }}" target="_blank">
-                            <img src="{{ URL::asset('/images/fasilitas/toilet.jpeg') }}" alt="Extra Photo 1"
-                                class="img-fluid">
-                        </a>
-                    </div>
-                    <!-- Foto 2 -->
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ URL::asset('/images/fasilitas/dapur4.jpeg') }}" target="_blank">
-                            <img src="{{ URL::asset('/images/fasilitas/dapur4.jpeg') }}" alt="Extra Photo 2"
-                                class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ URL::asset('/images/fasilitas/ac.jpeg') }}" target="_blank">
-                            <img src="{{ URL::asset('/images/fasilitas/ac.jpeg') }}" alt="Extra Photo 2"
-                                class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <a href="{{ URL::asset('/images/fasilitas/cctv.jpeg') }}" target="_blank">
-                            <img src="{{ URL::asset('/images/fasilitas/cctv.jpeg') }}" alt="Extra Photo 2"
-                                class="img-fluid">
-                        </a>
-                    </div>
+                    @php
+                        $photos = [
+                            '/images/fasilitas/toilet.jpeg',
+                            '/images/fasilitas/dapur4.jpeg',
+                            '/images/fasilitas/ac.jpeg',
+                            '/images/fasilitas/cctv.jpeg'
+                        ];
+                    @endphp
+
+                    @foreach($photos as $photo)
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ URL::asset($photo) }}" target="_blank">
+                                <img src="{{ URL::asset($photo) }}" alt="Extra Photo" class="img-fluid">
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+
