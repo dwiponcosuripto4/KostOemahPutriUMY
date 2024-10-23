@@ -13,26 +13,26 @@
             </div>
             <!-- Dua Gambar di Sisi Tengah -->
             <div class="col-lg-3">
-                <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                <img src="{{ URL::asset('/images/fasilitas/kasur.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
                      style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
                      onclick="window.open(this.src, '_blank')">
-                <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                <img src="{{ URL::asset('/images/fasilitas/mejakamar.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
                      style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
                      onclick="window.open(this.src, '_blank')">
             </div>
             <!-- Dua Gambar di Sisi Kanan -->
             <div class="col-lg-3">
-                <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                <img src="{{ URL::asset('/images/fasilitas/lemari.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
                      style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
                      onclick="window.open(this.src, '_blank')">
                 <div class="position-relative" style="border-radius: 10px; overflow: hidden;">
-                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                    <img src="{{ URL::asset('/images/fasilitas/dapur2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
                          style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
                          onclick="window.open(this.src, '_blank')">
                     <div class="position-absolute bottom-0 end-0 p-3 bg-dark text-light">
                         <span class="fs-4 fw-bold">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#morePhotosModal"
-                               style="color: white; text-decoration: none;">+2 More Photos</a>
+                               style="color: white; text-decoration: none;">+More Photos</a>
                         </span>
                     </div>
                 </div>
@@ -53,15 +53,27 @@
                     <div class="row">
                         <!-- Foto 1 -->
                         <div class="col-md-6 mb-3">
-                            <a href="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" target="_blank">
-                                <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Extra Photo 1"
+                            <a href="{{ URL::asset('/images/fasilitas/toilet.jpeg') }}" target="_blank">
+                                <img src="{{ URL::asset('/images/fasilitas/toilet.jpeg') }}" alt="Extra Photo 1"
                                     class="img-fluid">
                             </a>
                         </div>
                         <!-- Foto 2 -->
                         <div class="col-md-6 mb-3">
-                            <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
-                                <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Extra Photo 2"
+                            <a href="{{ URL::asset('/images/fasilitas/dapur4.jpeg') }}" target="_blank">
+                                <img src="{{ URL::asset('/images/fasilitas/dapur4.jpeg') }}" alt="Extra Photo 2"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ URL::asset('/images/fasilitas/ac.jpeg') }}" target="_blank">
+                                <img src="{{ URL::asset('/images/fasilitas/ac.jpeg') }}" alt="Extra Photo 2"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="{{ URL::asset('/images/fasilitas/cctv.jpeg') }}" target="_blank">
+                                <img src="{{ URL::asset('/images/fasilitas/cctv.jpeg') }}" alt="Extra Photo 2"
                                     class="img-fluid">
                             </a>
                         </div>
