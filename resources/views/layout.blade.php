@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Website Kost Oemah Putri UMY</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> 
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hamburger.css') }}">
     <!-- Bootstrap 5.3.3 CSS -->
@@ -82,12 +82,34 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
     <script>
         $(document).ready(function() {
             $('#nav-icon3').click(function() {
                 $(this).toggleClass('open');
                 $('#navbarText').toggleClass('show');
             });
+        });
+
+        $(document).ready(function() {
+            // Cek apakah galeri sudah ada di localStorage
+            if (localStorage.getItem('galleryContent')) {
+                // Tampilkan galeri dari localStorage
+                $('#gallery-section').html(localStorage.getItem('galleryContent'));
+            } else {
+                // Jika belum ada, lakukan request AJAX ke server untuk memuat galeri
+                $.ajax({
+                    url: '/load-gallery',
+                    method: 'GET',
+                    success: function(data) {
+                        $('#gallery-section').html(data); // Tampilkan galeri
+                        localStorage.setItem('galleryContent', data); // Simpan galeri di localStorage
+                    },
+                    error: function(error) {
+                        console.error("Gagal memuat gallery:", error);
+                    }
+                });
+            }
         });
     </script>
 </body>

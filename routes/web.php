@@ -36,3 +36,7 @@ Route::get('/price', function () {
 Route::get('/review', function () {
     return view('review');
 });
+
+Route::get('/load-gallery', function () {
+    return view('partials.gallery');
+});
