@@ -20,7 +20,7 @@ body {
     position: absolute; /* Agar tetap di tempatnya */
     right: 20px; /* Jarak dari kanan untuk desktop */
     top: 0; /* Tetap di bagian atas */
-    transform: translateY(50%); /* Untuk menengahkan secara vertikal */
+    transform: translateY(40%); /* Untuk menengahkan secara vertikal */
 }
 
 .navbar-brand:hover {
