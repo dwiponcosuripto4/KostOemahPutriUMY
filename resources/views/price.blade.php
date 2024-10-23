@@ -4,18 +4,107 @@
 
     <!-- Gallery Section -->
     <div class="container my-5">
-        <div class="row">
+        <div class="row gx-3 gy-3"> <!-- Gunakan gx-3 dan gy-3 untuk jarak antar kolom -->
+            <!-- Gambar Besar di Sisi Kiri -->
             <div class="col-lg-6">
-                <div class="bg-light" style="width:100%; height: 200px;"></div>
+                <a href="{{ URL::asset('/images/fasilitas/kamar.jpeg') }}" target="_blank">
+                    <img src="{{ URL::asset('/images/fasilitas/kamar.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                        style="width: 100%; height: 340px; object-fit: cover; border-radius: 10px;">
+                </a>
             </div>
+            <!-- Dua Gambar di Sisi Kanan -->
             <div class="col-lg-3">
-                <div class="bg-light" style="width:100%; height: 95px; margin-bottom: 10px;"></div>
-                <div class="bg-light" style="width:100%; height: 95px;"></div>
+                <a href="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" target="_blank">
+                    <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
+                </a>
+                <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
+                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
+                </a>
             </div>
+            <!-- Gambar dengan 'More Photos' -->
             <div class="col-lg-3">
-                <div class="bg-light position-relative" style="width:100%; height: 200px;">
-                    <div class="position-absolute bottom-0 end-0 p-3">
-                        <span class="fs-4 fw-bold">+2 More Photos</span>
+                <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
+                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
+                </a>
+                <div class="position-relative" style="border-radius: 10px; overflow: hidden;">
+                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
+                    <div class="position-absolute bottom-0 end-0 p-3 bg-dark text-light">
+                        <span class="fs-4 fw-bold">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#morePhotosModal"
+                                style="color: white; text-decoration: none;">+2 More Photos</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal untuk More Photos -->
+            <div class="modal fade" id="morePhotosModal" tabindex="-1" aria-labelledby="morePhotosModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="morePhotosModalLabel">More Photos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Foto 1 -->
+                                <div class="col-md-6 mb-3">
+                                    <a href="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" target="_blank">
+                                        <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Extra Photo 1"
+                                            class="img-fluid">
+                                    </a>
+                                </div>
+                                <!-- Foto 2 -->
+                                <div class="col-md-6 mb-3">
+                                    <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
+                                        <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Extra Photo 2"
+                                            class="img-fluid">
+                                    </a>
+                                </div>
+                                <!-- Foto 3 -->
+                                <div class="col-md-6 mb-3">
+                                    <a href="{{ URL::asset('/images/fasilitas/new_photo1.jpeg') }}" target="_blank">
+                                        <img src="{{ URL::asset('/images/fasilitas/new_photo1.jpeg') }}"
+                                            alt="Extra Photo 3" class="img-fluid">
+                                    </a>
+                                </div>
+                                <!-- Foto 4 -->
+                                <div class="col-md-6 mb-3">
+                                    <a href="{{ URL::asset('/images/fasilitas/new_photo2.jpeg') }}" target="_blank">
+                                        <img src="{{ URL::asset('/images/fasilitas/new_photo2.jpeg') }}"
+                                            alt="Extra Photo 4" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk More Photos -->
+    <div class="modal fade" id="morePhotosModal" tabindex="-1" aria-labelledby="morePhotosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="morePhotosModalLabel">More Photos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Extra Photo 1"
+                                class="img-fluid">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Extra Photo 2"
+                                class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 
     <!-- Contact Info Section -->
     <div class="container d-flex justify-content-center align-items-center" style="height: 60vh;">
-        <div class="card p-5 text-center bg-light" style="border-radius: 15px;">
+        <div class="card p-5 text-center bg-light" style="border-radius: 15px; z-index: 0;">
             <h4 class="fw-bold">CONTACT INFO</h4>
             <p>Phone number: 081234054811</p>
             <p>Kasihan Bantul Daerah Istimewa Yogyakarta</p>
