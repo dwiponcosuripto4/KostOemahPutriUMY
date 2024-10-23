@@ -4,37 +4,35 @@
     <!-- Gallery Section -->
     <div class="container my-5">
         <div class="row gx-3 gy-3"> <!-- Gunakan gx-3 dan gy-3 untuk jarak antar kolom -->
-            <!-- Video Besar di Sisi Kiri (Ganti Gambar dengan Video) -->
+            <!-- Video di Sisi Kiri -->
             <div class="col-lg-6">
                 <video id="video-facility" controls style="width: 100%; height: 340px; object-fit: cover; border-radius: 10px;">
                     <source src="{{ URL::asset('/videos/kamar.mp4') }}" type="video/mp4">
                     Browser Anda tidak mendukung video tag.
                 </video>
             </div>
+            <!-- Dua Gambar di Sisi Tengah -->
+            <div class="col-lg-3">
+                <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                     style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
+                     onclick="window.open(this.src, '_blank')">
+                <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
+                     style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
+                     onclick="window.open(this.src, '_blank')">
+            </div>
             <!-- Dua Gambar di Sisi Kanan -->
             <div class="col-lg-3">
-                <a href="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" target="_blank">
-                    <img src="{{ URL::asset('/images/fasilitas/tv.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
-                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
-                </a>
-                <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
-                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
-                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
-                </a>
-            </div>
-            <!-- Gambar dengan 'More Photos' -->
-            <div class="col-lg-3">
-                <a href="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" target="_blank">
-                    <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
-                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
-                </a>
+                <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid mb-2"
+                     style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
+                     onclick="window.open(this.src, '_blank')">
                 <div class="position-relative" style="border-radius: 10px; overflow: hidden;">
                     <img src="{{ URL::asset('/images/fasilitas/tv2.jpeg') }}" alt="Fasilitas Kost" class="img-fluid"
-                        style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
+                         style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px; cursor: pointer;"
+                         onclick="window.open(this.src, '_blank')">
                     <div class="position-absolute bottom-0 end-0 p-3 bg-dark text-light">
                         <span class="fs-4 fw-bold">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#morePhotosModal"
-                                style="color: white; text-decoration: none;">+2 More Photos</a>
+                               style="color: white; text-decoration: none;">+2 More Photos</a>
                         </span>
                     </div>
                 </div>
