@@ -57,7 +57,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('review') ? 'active' : '' }}"
-                            href="{{ url('/review') }}">Ulasan dan Rating</a>
+                            href="{{ url('/review') }}" data-turbolinks="false">Ulasan dan Rating</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('about') ? 'active' : '' }}"
