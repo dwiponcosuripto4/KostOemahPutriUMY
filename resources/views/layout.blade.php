@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Website Kost Oemah Putri UMY</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> 
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hamburger.css') }}">
     <!-- Bootstrap 5.3.3 CSS -->
@@ -15,12 +15,16 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -56,8 +60,8 @@
                             href="{{ url('/contact') }}">Informasi Kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('review') ? 'active' : '' }}"
-                            href="{{ url('/review') }}" data-turbolinks="false">Ulasan dan Rating</a>
+                        <a class="nav-link {{ request()->is('review') ? 'active' : '' }}" href="{{ url('/review') }}"
+                            data-turbolinks="false">Ulasan dan Rating</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('about') ? 'active' : '' }}"

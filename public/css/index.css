@@ -52,3 +52,86 @@ img.img-fluid {
         margin: 0 auto; /* Agar gambar berada di tengah */
     }
 }
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Atur agar carousel memenuhi lebar halaman tanpa padding */
+.carousel {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+/* Overlay effect on images */
+.carousel-item .carousel-overlay {
+    position: relative;
+}
+
+.carousel-item .carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Gelap, 50% transparansi */
+    z-index: 1;
+}
+
+.carousel-item img {
+    position: relative;
+    z-index: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.carousel .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Animasi fadeInDown */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation: fadeInDown 1s both;
+}
+
+.fadeInDown-delay {
+    animation: fadeInDown 1s both 0.2s;
+}
+
+/* Animasi fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menerapkan animasi pada tombol Read More */
+.fadeInUp {
+    animation: fadeInUp 1s both 0.4s;
+}
