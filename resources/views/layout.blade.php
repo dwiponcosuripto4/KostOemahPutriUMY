@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
@@ -49,11 +52,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('facility') ? 'active' : '' }}"
-                            href="{{ url('/facility') }}">Fasilitas Kost</a>
+                            href="{{ url('/facility') }}" data-turbolinks="false">Fasilitas Kost</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('price') ? 'active' : '' }}"
-                            href="{{ url('/price') }}">Informasi Harga dan Pembayaran</a>
+                            href="{{ url('/price') }}" data-turbolinks="false">Informasi Harga dan Pembayaran</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
@@ -91,7 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -121,6 +124,63 @@
                     },
                     error: function(error) {
                         console.error("Gagal memuat gallery:", error);
+                    }
+                });
+            }
+        });
+
+        $(document).ready(function() {
+            function initFancybox() {
+                Fancybox.bind("[data-fancybox]", {
+                    // Custom options
+                    Thumbs: {
+                        autoStart: true,
+                    },
+                    Toolbar: {
+                        display: {
+                            left: ["infobar"],
+                            right: ["slideshow", "thumbs", "close"],
+                        },
+                    },
+                });
+            }
+
+            // Handler untuk memuat gallery dan menginisialisasi Fancybox
+            function loadGallery() {
+                $.ajax({
+                    url: '/load-gallery',
+                    method: 'GET',
+                    success: function(data) {
+                        $('#gallery-section').html(data);
+                        initFancybox(); // Inisialisasi Fancybox setelah konten dimuat
+                    },
+                    error: function(error) {
+                        console.error("Gagal memuat gallery:", error);
+                    }
+                });
+            }
+
+            // Load gallery saat halaman pertama dimuat
+            loadGallery();
+
+            // Reinisialisasi saat Turbolinks selesai memuat halaman
+            document.addEventListener("turbolinks:load", function() {
+                loadGallery();
+            });
+        });
+        document.addEventListener("turbolinks:load", function() {
+            const video = document.getElementById('video-facility');
+            if (video) {
+                video.load(); // Force reload video
+                video.addEventListener('fullscreenchange', (e) => {
+                    if (document.fullscreenElement) {
+                        video.style.objectFit = 'contain';
+                        video.style.width = '100%';
+                        video.style.height = '100%';
+                    } else {
+                        video.style.objectFit = 'cover';
+                        video.style.width = '100%';
+                        video.style.height = '340px';
                     }
                 });
             }

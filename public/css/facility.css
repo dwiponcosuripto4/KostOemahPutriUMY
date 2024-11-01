@@ -5,3 +5,20 @@
     object-fit: contain; /* Pastikan gambar tetap proporsional dalam kotak */
 }
 
+.gallery-item {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.gallery-item:hover {
+    opacity: 0.9;
+}
+
+.gallery-image {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.02);
+}

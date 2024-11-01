@@ -2,7 +2,7 @@
 
 @section('content')
     <meta name="turbolinks-cache-control" content="no-cache">
-    <div id="gallery-section"></div>
+    @include('partials.gallery')
 
     <!-- Title Section -->
     <div class="container">
