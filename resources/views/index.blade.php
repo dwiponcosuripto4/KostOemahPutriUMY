@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Carousel Section -->
-    <section id="carousel-section" class="carousel-section">
+    <section id="carousel" class="carousel section">
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-4" style="width: 100vw; margin-left: calc(50% - 50vw);">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -18,7 +18,7 @@
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Welcome to Kost Oemah Putri</h2>
                         <p class="fadeInDown-delay">Kost Oemah Putri adalah hunian nyaman dan aman bagi mahasiswi dekat UMY, dengan lokasi strategis dan suasana tenang.</p>
-                        <a href="#description-section" class="btn btn-primary mt-3 fadeInUp">Read More</a>
+                        <a href="#description" class="btn btn-primary mt-3 fadeInUp">Read More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -28,7 +28,7 @@
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Kost Oemah Putri</h2>
                         <p class="fadeInDown-delay">Fasilitas lengkap disediakan, seperti kamar ber-AC, kamar mandi dalam, Wi-Fi cepat, dapur bersama, dan area parkir. Kost ini menawarkan suasana homey yang nyaman dan aman.</p>
-                        <a href="#description-section" class="btn btn-primary mt-3 fadeInUp">Read More</a>
+                        <a href="#description" class="btn btn-primary mt-3 fadeInUp">Read More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -38,7 +38,7 @@
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Kost Oemah Putri</h2>
                         <p class="fadeInDown-delay">Dengan harga terjangkau, Kost Oemah Putri menjadi solusi hunian praktis dekat kampus. Rasakan kenyamanan tinggal di Kost Oemah Putri UMY!</p>
-                        <a href="#description-section" class="btn btn-primary mt-3 fadeInUp">Read More</a>
+                        <a href="#description" class="btn btn-primary mt-3 fadeInUp">Read More</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
     </section>
 
     <!-- Description Section -->
-    <section id="description-section" class="description-section">
+    <section id="description" class="description section">
         <div class="description">
             <p>
                 Kost Oemah Putri adalah tempat penginapan yang nyaman dan aman, terletak dekat Universitas Muhammadiyah
@@ -66,7 +66,7 @@
     </section>
 
     <!-- Location Section -->
-    <section id="location" class="location-section">
+    <section id="location" class="location section">
         <div class="location">
             <h2>Location</h2>
             <p>Ngebel, Tamantirto, Kec. Kasihan, Bantul, DIY</p>
@@ -80,4 +80,5 @@
     </section>
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+
 @endsection

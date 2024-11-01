@@ -2,8 +2,13 @@
 
 @section('content')
     <!-- About Us Section -->
-    <div class="container my-5">
-        <h1 class="fw-bold">About us</h1>
+    <div class="container my-5" style="padding-top: 80px;">
+        <h1 class="fw-bold text-center">About us</h1>
+        <p class="lead mb-4 text-center">
+            Welcome to Kost Oemah Putri UMY, your ideal housing solution close to Universitas Muhammadiyah Yogyakarta.
+            We strive to provide a comfortable and safe environment with modern amenities, ensuring a pleasant living
+            experience. Explore our features and discover why our place is perfect for students seeking convenience and comfort.
+        </p>
         <div class="col-md-12">
             <div class="slider-hero">
                 <div class="featured-carousel owl-carousel">

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container"> <!-- Tambahkan container di sini -->
+    <div class="container" style="padding-top: 80px;"> <!-- Tambahkan container di sini -->
         <h2 class="fw-bold mb-4 text-center">Review Summary</h2>
         <div class="row">
             <!-- Average Rating with Card -->

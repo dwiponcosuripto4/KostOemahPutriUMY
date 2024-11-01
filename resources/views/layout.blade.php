@@ -31,22 +31,23 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg {{ request()->is('/') ? 'navbar-index' : '' }}">
         <div class="container-fluid">
-            <!-- Navbar Brand di sebelah kanan -->
-            <a class="navbar-brand ms-auto" href="/">Kost Oemah Putri UMY</a>
-            <!-- Hamburger tetap di sebelah kanan untuk mobile -->
+            <!-- Navbar Brand di kiri -->
+            <a class="navbar-brand" href="/">Kost Oemah Putri UMY</a>
+
+            <!-- Hamburger untuk mobile -->
             <div id="nav-icon3" class="navbar-toggler" aria-controls="navbarText" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <!-- Navbar Links di kanan -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                     </li>
@@ -55,8 +56,8 @@
                             href="{{ url('/facility') }}" data-turbolinks="false">Fasilitas Kost</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('price') ? 'active' : '' }}"
-                            href="{{ url('/price') }}" data-turbolinks="false">Informasi Harga dan Pembayaran</a>
+                        <a class="nav-link {{ request()->is('price') ? 'active' : '' }}" href="{{ url('/price') }}"
+                            data-turbolinks="false">Informasi Harga dan Pembayaran</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
@@ -76,7 +77,7 @@
     </nav>
 
     <!-- Content Area -->
-    <div class="container mt-5">
+    <div class="container">
         @yield('content')
     </div>
 
@@ -181,6 +182,18 @@
                         video.style.objectFit = 'cover';
                         video.style.width = '100%';
                         video.style.height = '340px';
+                    }
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector(".navbar-index");
+            if (navbar) {
+                window.addEventListener("scroll", function() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add("scrolled");
+                    } else {
+                        navbar.classList.remove("scrolled");
                     }
                 });
             }

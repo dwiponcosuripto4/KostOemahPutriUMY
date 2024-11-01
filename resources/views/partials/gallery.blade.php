@@ -1,5 +1,5 @@
 <!-- Gallery Section -->
-<div class="container my-5">
+<div class="container my-5" style="padding-top: 80px;">
     <div class="row gx-3 gy-3">
         <!-- Video di Sisi Kiri -->
         <div class="col-lg-6">
