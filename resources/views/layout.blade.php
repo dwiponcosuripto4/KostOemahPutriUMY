@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-lg {{ request()->is('/') ? 'navbar-index' : '' }}">
         <div class="container-fluid">
             <!-- Navbar Brand di kiri -->
-            <a class="navbar-brand" href="/">Kost Oemah Putri UMY</a>
+            <a class="navbar-brand" href="/" data-turbolinks="false">Kost Oemah Putri UMY</a>
 
             <!-- Hamburger untuk mobile -->
             <div id="nav-icon3" class="navbar-toggler" aria-controls="navbarText" aria-expanded="false">
@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}" data-turbolinks="false">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('facility') ? 'active' : '' }}"

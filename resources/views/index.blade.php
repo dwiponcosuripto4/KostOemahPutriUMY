@@ -80,5 +80,17 @@
     </section>
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const readMoreButton = document.querySelector(".btn-primary[href='#description']");
+            readMoreButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                const descriptionSection = document.getElementById("description");
+                const offset = descriptionSection.getBoundingClientRect().top + window.scrollY - 100; // Adjust offset if necessary
+                window.scrollTo({ top: offset, behavior: "smooth" });
+            });
+        });
+    </script>
+    
 
 @endsection

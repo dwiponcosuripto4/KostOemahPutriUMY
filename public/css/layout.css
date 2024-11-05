@@ -9,20 +9,21 @@ body {
     left: 0;
     height: 85.5px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Transparansi untuk navbar */
     z-index: 1000; /* Pastikan navbar selalu di atas */
     padding: 10px 0; /* Atur padding sesuai kebutuhan */
-    transition: background-color 0.3s ease; /* Untuk efek transisi */
+    
 }
 
 /* Gaya untuk navbar di halaman index */
 .navbar.navbar-index {
     background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease; /* Untuk efek transisi */
 }
 
 /* Gaya navbar saat scroll di halaman index */
 .navbar.navbar-index.scrolled {
     background-color: rgba(0, 0, 0, 0.85); /* Solid saat di-scroll */
+    transition: background-color 0.3s ease; /* Untuk efek transisi */
 }
 
 /* Gaya untuk halaman lain */

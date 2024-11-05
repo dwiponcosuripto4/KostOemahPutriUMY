@@ -12,7 +12,7 @@
 
     <!-- Facility Section -->
     <div class="container mt-5">
-        <h4 class="fw-bold">Fasilitas Kost</h4>
+        <h4 class="fw-bold">Fasilitas Kamar Kost</h4>
         <div class="row mt-3">
             <div class="col-6 col-md-4 mb-4">
                 <img src="{{ URL::asset('/icons/bed.png') }}" alt="Ukuran Kamar" class="facility-icon me-2"> Uk kamar

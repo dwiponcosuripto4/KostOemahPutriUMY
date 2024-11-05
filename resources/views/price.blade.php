@@ -7,7 +7,7 @@
     <div class="container mt-4">
         <div class="row">
             <!-- Left Column: Title, Facility, Description, and Payment Section -->
-            <div class="col-md-8">
+            <div class="col-md-8 order-1 order-md-1">
                 <!-- Title Section -->
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -28,51 +28,52 @@
                 <!-- Facility Section -->
                 <div class="container mt-4">
                     <h4 class="fw-bold">Fasilitas Kost</h4>
-                    <div class="d-flex justify-content-between flex-wrap gap-2">
-                        <div class="card text-center"
-                            style="width: 150px; height: 150px; background-color: #f8f9fa; border: none;">
-                            <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+                    <div class="facility-container">
+                        <div class="facility-card">
+                            <div class="icon-container">
                                 <img src="{{ URL::asset('/icons/policeman.png') }}" alt="Penjaga Kost 24 Jam"
-                                    style="width: 40px;">
+                                    class="facility-icon">
                             </div>
                             <p class="mt-2">Penjaga Kost 24 Jam</p>
                         </div>
-                        <div class="card text-center"
-                            style="width: 150px; height: 150px; background-color: #f8f9fa; border: none;">
-                            <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
-                                <img src="{{ URL::asset('/icons/kitchen-table.png') }}" alt="Dapur Umum"
-                                    style="width: 40px;">
+                        <div class="facility-card">
+                            <div class="icon-container">
+                                <img src="{{ URL::asset('/icons/kitchen-table.png') }}" alt="Dapur Umum/Kantin Dalam"
+                                    class="facility-icon">
                             </div>
                             <p class="mt-2">Dapur Umum/Kantin Dalam</p>
                         </div>
-                        <div class="card text-center"
-                            style="width: 150px; height: 150px; background-color: #f8f9fa; border: none;">
-                            <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
-                                <img src="{{ URL::asset('/icons/bicycle.png') }}" alt="Parkir" style="width: 40px;">
+                        <div class="facility-card">
+                            <div class="icon-container">
+                                <img src="{{ URL::asset('/icons/bicycle.png') }}" alt="Parkir" class="facility-icon">
                             </div>
                             <p class="mt-2">Parkir</p>
                         </div>
-                        <div class="card text-center"
-                            style="width: 150px; height: 150px; background-color: #f8f9fa; border: none;">
-                            <div class="d-flex align-items-center justify-content-center" style="height: 80px;">
+                        <div class="facility-card">
+                            <div class="icon-container">
                                 <img src="{{ URL::asset('/icons/security-camera.png') }}" alt="CCTV 24 Jam"
-                                    style="width: 40px;">
+                                    class="facility-icon">
                             </div>
                             <p class="mt-2">CCTV 24 Jam</p>
                         </div>
                     </div>
-
-                    <!-- Description Section -->
-                    <h4 class="fw-bold mt-4">Deskripsi Kost</h4>
-                    <div class="bg-light" style="width:100%; height: 150px;"></div>
                 </div>
 
-
+                <!-- Description Section -->
+                <h4 class="fw-bold mt-4">Deskripsi Kost</h4>
+                <div class="description-container">
+                    <p>
+                        Kost Oemah Putri menawarkan suasana hunian yang nyaman dan aman untuk mahasiswi dekat
+                        Universitas Muhammadiyah Yogyakarta. Dengan fasilitas lengkap dan lingkungan yang tenang, kost
+                        ini ideal untuk belajar dan beristirahat.
+                    </p>
+                </div>
             </div>
 
             <!-- Right Column: Price Section -->
-            <div class="col-md-4">
-                <div class="card p-4 shadow" style="width: 100%; border-radius: 12px; background-color: #f8f9fa;">
+            <div class="col-md-4 order-2 order-md-2 mb-4">
+                <div class="card p-4 shadow price-container"
+                    style="width: 100%; border-radius: 12px; background-color: #f8f9fa;">
                     <h4 style="font-weight: bold; color: #333;">Rp 1.450.000</h4>
                     <hr style="width: 100%; border: 0.5px solid #ddd;">
                     <ul class="list-unstyled mt-3 mb-4" style="color: #777; padding-left: 0;">
@@ -82,7 +83,8 @@
                     </ul>
                     <div class="text-center">
                         <a href="https://wa.me/6281234054811" target="_blank" style="text-decoration: none;">
-                            <button class="btn w-100 mb-3" style="background-color: #444; color: white; border-radius: 20px; font-weight: bold;">
+                            <button class="btn w-100 mb-3"
+                                style="background-color: #444; color: white; border-radius: 20px; font-weight: bold;">
                                 Booking Now
                             </button>
                         </a>
@@ -91,12 +93,14 @@
                             <i class="fas fa-phone-alt me-2" style="color: #444;"></i>
                             <span style="font-weight: bold; color: #444;">Contact Kost</span>
                         </a>
-
                     </div>
                 </div>
             </div>
 
         </div>
+    </div>
+
+    </div>
     </div>
 
     <!-- Payment Section -->
