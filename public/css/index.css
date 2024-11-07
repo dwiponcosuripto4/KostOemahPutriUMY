@@ -1,15 +1,97 @@
 html {
     scroll-behavior: smooth;
 }
-/* Atur agar iframe Google Maps responsif */
-.map-container {
+#location {
+    width: 100vw;
+    margin-left: calc(50% - 50vw); /* Memusatkan section ke layar dengan lebar penuh */
+    padding: 2em 0;
     position: relative;
-    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
-    height: 0;
-    overflow: hidden;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#location::before {
+    content: "";
+    background-image: url('../images/fasilitas/viewkost.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7; /* Transparansi gambar background */
+}
+
+#location::after {
+    content: "";
+    background-color: rgba(21, 52, 72, 0.85); /* Overlay warna sesuai permintaan */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.location-container {
+    position: relative;
+    z-index: 3; /* Memastikan konten berada di atas overlay */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.location h2, 
+.location p {
+    color: #DFD0B8; /* Sesuaikan warna teks agar kontras dengan background dan overlay */
+    margin-bottom: 1em;
+}
+
+.location-info a {
+    color: #DFD0B8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.location-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+}
+.location-list li {
+    margin-bottom: 0.5em;
+}
+
+.btn-booking {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 2em;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #e42127;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-booking:hover {
+    background-color: #c31d23;
+}
+
+.map-container {
+    width: 100%;
     max-width: 100%;
-    background-color: #e0e0e0;
-    margin: 0 auto; /* Agar map selalu berada di tengah */
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    position: relative;
+    border: 5px solid #948979;
+    margin-top: 2em;
+    z-index: 3; /* Memastikan map berada di atas overlay */
 }
 
 .map-container iframe {
@@ -18,32 +100,205 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: none;
 }
 
-/* Atur agar section description memiliki lebar penuh seperti carousel */
+/* Atur section description sebagai flex container dan posisikan konten di tengah */
 .description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Menempatkan video dan teks di tengah secara horizontal */
+    background-color: #DFD0B8;
+    padding: 2em;
     width: 100vw;
-    margin-left: calc(50% - 50vw); /* Memastikan posisi di tengah */
-    padding: 2em 0; /* Memberikan jarak vertikal */
-    text-align: center;
+    margin-left: calc(50% - 50vw);
+    gap: 2em;
 }
 
-/* Atur konten teks dalam description agar sejajar */
-.description p {
-    max-width: 800px; /* Batasi lebar teks agar tidak terlalu lebar */
-    margin: 0 auto;
-    padding: 0 1em; /* Sedikit padding agar teks tidak menempel di tepi */
-    font-size: 1.1rem; /* Ukuran font deskripsi */
-    line-height: 1.6;
-    color: #333;
+/* Atur video di sebelah kiri dalam orientasi potret */
+.video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Memastikan video mulai dari atas */
+    max-width: 40%;
+}
+
+.video-container video {
+    width: auto;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.text-content {
+    align-self: center;
+    flex: 1;
+    max-width: 100%;
+    padding: 2em;
+    margin: 0;
+    color: #153448; /* Warna teks yang lebih kontras */
+    border: 4px solid #3C5B6F;
+    border-radius: 8px;
+    background-image: url('../images/fasilitas/viewkost.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Overlay yang lebih gelap untuk meningkatkan keterbacaan */
+.text-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(21, 52, 72, 0.95); /* Warna hitam dengan opacity 0.6 */
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Styling untuk teks dan heading */
+.text-content h2,
+.text-content p {
+    position: relative;
+    z-index: 2; /* Supaya berada di atas overlay */
+    opacity: 1;
+    transform: translateX(0); /* Posisi normal */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek hover untuk menghilangkan teks dan overlay */
+.text-content:hover::before,
+.text-content:hover h2,
+.text-content:hover p {
+    opacity: 0;
+    transform: translateX(20px); /* Menghilang ke kanan */
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 750;
+    margin: 0 0 1.5rem 0;
+    color: #DFD0B8; /* Warna h2 */
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff; /* Warna teks paragraf */
 }
 
 
-.location {
-    text-align: center;
-    margin-top: 30px;
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+    /* Atur ulang layout menjadi vertikal */
+    .description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .video-container, .text-container {
+        max-width: 100%;
+    }
+
+    .text-content {
+        max-width: 100%;
+        padding: 1.5em;
+        margin-top: 1em; /* Beri sedikit jarak di atas untuk pemisahan */
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .text-content h2 {
+        font-size: 1.8rem; /* Kurangi ukuran font untuk mobile */
+        margin-bottom: 1rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+
+    .text-content:hover::before,
+    .text-content:hover h2,
+    .text-content:hover p {
+        opacity: 1; /* Matikan efek hover */
+        transform: translateX(0); /* Matikan pergeseran teks */
+    }
+    /* Styling untuk tombol dan ikon panah */
+    .button-container {
+        justify-content: center; /* Center align untuk tombol di mobile */
+        margin-top: 1em; /* Beri jarak di atas tombol */
+    }
+
+    .btn-view-facilities {
+        font-size: 1rem; /* Kurangi ukuran font untuk tombol */
+        padding: 0.7em 1.2em;
+    }
+
+    .icon-arrow {
+        font-size: 1.2rem;
+    }
 }
+
+/* Styling untuk container tombol */
+.button-container {
+    display: flex;
+    justify-content: center; /* Menyelaraskan tombol dan ikon secara vertikal */
+    gap: 0.5em; /* Menambahkan jarak antara tombol dan ikon */
+}
+
+/* Styling untuk tombol */
+.btn-view-facilities {
+    padding: 0.8em 1.5em;
+    background-color: #3C5B6F;
+    color: #DFD0B8;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk ikon panah di luar tombol */
+.icon-arrow {
+    font-size: 1.5rem;
+    color: #3C5B6F;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-left: 0.5em; /* Menambahkan jarak antara tombol dan ikon */
+}
+
+/* Efek hover pada tombol saja */
+.btn-view-facilities:hover {
+    background-color: #153448;
+    color: #ffffff;
+    transform: translateY(-2px); /* Menerapkan efek angkat pada tombol */
+}
+
+/* Efek hover hanya pada ikon panah */
+.button-container:hover .icon-arrow {
+    color: #153448;
+    transform: translateX(5px); /* Menggeser ikon panah ke kanan saat di-hover */
+}
+
+/* Fokus efek pada tombol */
+.btn-view-facilities:focus {
+    outline: 2px solid #948979;
+    outline-offset: 2px;
+}
+
+
 
 .map img {
     width: 100%;
@@ -94,7 +349,7 @@ img.img-fluid {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap dengan transparansi 50% */
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap dengan transparansi 50% */
     z-index: 1;
 }
 
@@ -114,6 +369,25 @@ img.img-fluid {
     z-index: 2;
     max-width: 80%;
 }
+
+/* Menonaktifkan seleksi teks dan klik pada carousel */
+.carousel-caption,
+.carousel-caption h2,
+.carousel-caption p {
+    user-select: none; /* Nonaktifkan seleksi */
+    -webkit-user-select: none; /* Nonaktifkan seleksi di Webkit */
+    -moz-user-select: none; /* Nonaktifkan seleksi di Firefox */
+    -ms-user-select: none; /* Nonaktifkan seleksi di IE */
+}
+
+.carousel-caption {
+    pointer-events: none; /* Nonaktifkan klik pada area carousel */
+}
+
+.carousel .btn-primary {
+    pointer-events: auto; /* Aktifkan pointer-event pada tombol saja */
+}
+
 
 @media (max-width: 768px) {
     .carousel-caption {
@@ -147,15 +421,35 @@ img.img-fluid {
         margin-top: 15px;
         align-self: center; /* Posisi tombol di kiri */
     }
+    
 }
 
-/* Mengatur button */
+/* Tombol "Read More" */
 .carousel .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #3C5B6F; /* Warna latar belakang utama */
+    color: #ffffff; /* Warna teks */
+    border: 1px solid #DFD0B8;
     padding: 0.8em 2em;
     font-size: 1.2em;
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+    outline: none; /* Hilangkan outline biru */
+    box-shadow: none; /* Hilangkan bayangan tambahan pada klik */
 }
+
+/* Efek Hover pada Tombol */
+.carousel .btn-primary:hover {
+    background-color: #153448; /* Warna saat di-hover */
+    color: #d4af37; /* Tetap warna teks yang sama */
+}
+
+.carousel .btn-primary:focus,
+.carousel .btn-primary:active,
+.carousel .btn-primary:visited {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
 
 /* Animasi fadeInDown */
 @keyframes fadeInDown {

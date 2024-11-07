@@ -14,23 +14,22 @@ body {
     
 }
 
-/* Gaya untuk navbar di halaman index */
+/* Gaya untuk navbar di halaman index saat pertama kali dibuka (sedikit transparan) */
 .navbar.navbar-index {
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease; /* Untuk efek transisi */
+    background-color: rgba(21, 52, 72, 0.85);
+    transition: background-color 0.3s ease;
 }
 
-/* Gaya navbar saat scroll di halaman index */
+/* Navbar saat mulai di-scroll (solid tanpa transparansi) */
 .navbar.navbar-index.scrolled {
-    background-color: rgba(0, 0, 0, 0.85); /* Solid saat di-scroll */
-    transition: background-color 0.3s ease; /* Untuk efek transisi */
+    background-color: #153448;
+    transition: background-color 0.3s ease;
 }
 
 /* Gaya untuk halaman lain */
 .navbar:not(.navbar-index) {
-    background-color: rgba(0, 0, 0, 0.85); /* Solid */
+    background-color: rgba(21, 52, 72); /* Solid */
 }
-
 
 .navbar .container-fluid {
     display: flex;
@@ -57,9 +56,12 @@ body {
 .navbar-nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-left: auto;
+    justify-content: center; /* Tambahkan ini untuk memusatkan nav-links */
+    width: 100%; /* Pastikan navbar mengisi seluruh lebar */
 }
+
 
 /* Animasi untuk membuka navbar */
 @keyframes slideDown {
@@ -109,6 +111,35 @@ body {
     animation: slideUp 0.5s forwards;
 }
 
+/* Responsiveness for smaller laptop screens (13-15 inch) */
+@media (max-width: 1366px) {
+    /* Mengurangi ukuran font nav-link */
+    .navbar-nav .nav-link {
+        font-size: 15px; /* Sesuaikan ukuran font */
+        padding: 0 10px; /* Kurangi padding untuk mengurangi lebar total */
+    }
+
+    /* Mengurangi ukuran font navbar-brand */
+    .navbar-brand {
+        font-size: 1.3rem; /* Sesuaikan ukuran font untuk brand */
+    }
+
+    /* Sesuaikan padding navbar di laptop kecil */
+    .navbar {
+        padding: 8px 0; /* Kurangi padding atas dan bawah */
+    }
+}
+
+/* Responsiveness for even smaller screens (like tablets) */
+@media (max-width: 1024px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+    .navbar-brand {
+        font-size: 1.1rem; /* Ukuran font untuk brand lebih kecil */
+    }
+}
+
 /* Responsiveness for Mobile */
 @media (max-width: 991.98px) {
     .navbar {
@@ -149,7 +180,6 @@ body {
     #nav-icon3 {
         margin-left: auto; /* Pastikan hamburger di kanan */
     }
-
 }
 
 section {
@@ -160,17 +190,17 @@ section {
     color: #ffffff;
     transition: color 0.3s ease, transform 0.3s ease;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 17px;
     border-radius: 5px;
 }
 
 .navbar-nav .nav-link.active {
-    color: #ffffff !important;
+    color: #DFD0B8 !important;
     font-weight: 700;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #d4af37;
+    color: #DFD0B8;
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -200,4 +230,20 @@ section {
 /* Warna ikon hamburger untuk kontras */
 .navbar-toggler .navbar-toggler-icon {
     background-color: #ffffff00; /* Sesuaikan dengan latar belakang navbar */
+}
+
+/* Footer */
+footer {
+    background-color: #153448; /* Gunakan warna biru tua sesuai dengan palet */
+    color: #DFD0B8; /* Gunakan warna beige muda untuk teks agar kontras */
+    padding: 20px 0;
+}
+
+footer a {
+    color: #DFD0B8; /* Warna beige muda untuk link */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #948979; /* Warna aksen untuk efek hover pada link */
 }

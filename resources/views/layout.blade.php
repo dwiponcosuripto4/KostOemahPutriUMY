@@ -82,7 +82,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer class="py-4">
         <div class="container text-center">
             <p class="mb-0">© 2024 Kost Oemah Putri UMY. All Rights Reserved.</p>
             <p>

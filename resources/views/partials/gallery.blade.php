@@ -1,6 +1,6 @@
 <!-- Gallery Section -->
-<div class="container my-5" style="padding-top: 80px;">
-    <div class="row gx-3 gy-3">
+<div class="container my-5" style="padding-top: 80px; background-color: #DFD0B8; width: 100vw">
+    <div class="row gx-3 gy-2" style="border-radius: 10px; background-color: #3C5B6F;">
         <!-- Video di Sisi Kiri -->
         <div class="col-lg-6">
             <video id="video-facility" controls style="width: 100%; height: 340px; object-fit: cover; border-radius: 10px;">
@@ -20,10 +20,10 @@
             </a>
             <a href="{{ URL::asset('/images/fasilitas/mejakamar.jpeg') }}" 
                data-fancybox="gallery"
-               class="d-block">
+               class="mb-2 d-block gallery-item">
                 <img src="{{ URL::asset('/images/fasilitas/mejakamar.jpeg') }}" 
                      alt="Fasilitas Kost" 
-                     class="img-fluid"
+                     class="img-fluid gallery-image"
                      style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
             </a>
         </div>
@@ -31,19 +31,19 @@
         <div class="col-lg-3">
             <a href="{{ URL::asset('/images/fasilitas/lemari.jpeg') }}" 
                data-fancybox="gallery"
-               class="mb-2 d-block">
+               class="mb-2 d-block gallery-item">
                 <img src="{{ URL::asset('/images/fasilitas/lemari.jpeg') }}" 
                      alt="Fasilitas Kost" 
-                     class="img-fluid"
+                     class="img-fluid gallery-image"
                      style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
             </a>
             <div class="position-relative" style="border-radius: 10px; overflow: hidden;">
                 <a href="{{ URL::asset('/images/fasilitas/dapur2.jpeg') }}" 
                    data-fancybox="gallery"
-                   class="d-block">
+                   class="mb-2 d-block gallery-item">
                     <img src="{{ URL::asset('/images/fasilitas/dapur2.jpeg') }}" 
                          alt="Fasilitas Kost" 
-                         class="img-fluid"
+                         class="img-fluid gallery-image"
                          style="width: 100%; height: 165px; object-fit: cover; border-radius: 10px;">
                 </a>
                 <div class="position-absolute bottom-0 end-0 p-3 bg-dark text-light">

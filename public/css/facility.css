@@ -22,6 +22,7 @@
 .gallery-item:hover .gallery-image {
     transform: scale(1.02);
 }
+
 /* Mengatur tata letak fasilitas agar lebih responsif di mobile */
 @media (max-width: 576px) {
     .facility-icon {
@@ -41,4 +42,18 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+/* Mengatur warna background dan teks untuk elemen lain sesuai color palette */
+body {
+    background-color: #DFD0B8;
+    color: #3C5B6F;
+}
+
+.container h2, .container h4 {
+    color: #153448;
+}
+
+.facility-text {
+    color: #3C5B6F;
 }

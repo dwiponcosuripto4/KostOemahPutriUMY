@@ -64,9 +64,17 @@
         <div class='sk-ww-google-reviews' data-embed-id='25476295'></div>
     </div> <!-- Tutup container di sini -->
 
-    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer data-turbolinks-eval="always"></script>
+    <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer data-turbolinks-eval="always">
+    </script>
 
+<style>
+    .sk-ww-google-reviews a[href*="sociablekit"] {
+    display: none !important;
+}
 
+</style>
+
+    
     <script>
         document.addEventListener('turbolinks:load', function() {
             // Hapus skrip widget Google Reviews jika sudah ada untuk menghindari duplikasi
