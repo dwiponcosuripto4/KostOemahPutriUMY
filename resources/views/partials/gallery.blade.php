@@ -1,5 +1,5 @@
 <!-- Gallery Section -->
-<div class="container my-5 gallery-container">
+<div class="container my-3 gallery-container">
     <div class="row gx-3 gy-2 gallery-row gallery-grid-mobile">
         <!-- Overlay warna -->
         <div class="overlay"></div>
