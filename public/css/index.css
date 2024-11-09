@@ -394,39 +394,38 @@ img.img-fluid {
         width: 100%;
         padding: 0 15px;
         box-sizing: border-box;
-        text-align: center; /* Rata kiri untuk mengikuti contoh */
+        text-align: center; /* Center alignment */
         display: flex;
         flex-direction: column;
-        align-items: center; /* Untuk menjaga elemen di tengah */
+        align-items: center; /* Center align elements */
         top: 45%;
     }
     .carousel-caption h2 {
         font-size: 2.2rem;
         font-weight: bold;
-        margin: 0 auto 15px auto; /* Auto margin kiri-kanan agar tetap di tengah */
-        text-align: left; /* Sesuaikan dengan rata kiri */
+        margin: 0 auto 15px auto; /* Centered margin */
+        text-align: center; /* Center-align text */
         line-height: 1.2;
-        max-width: 90%; /* Batasi lebar agar tidak terlalu memenuhi layar */
+        max-width: 90%; /* Limit width */
     }
     .carousel-caption p {
         font-size: 1.1rem;
         line-height: 1.4;
         max-width: 90%;
-        text-align: left;
-        margin: 0;
+        text-align: center; /* Center-align text */
+        margin: 0 auto;
     }
     .carousel-caption .btn-primary {
         padding: 0.6em 1.5em;
         font-size: 1rem;
         margin-top: 15px;
-        align-self: center; /* Posisi tombol di kiri */
+        align-self: center; /* Center button */
     }
-    
 }
 
 /* Tombol "Read More" */
 .carousel .btn-primary {
-    background-color: #3C5B6F; /* Warna latar belakang utama */
+    background-color: #153448ea; /* Warna latar belakang utama */
     color: #ffffff; /* Warna teks */
     border: 1px solid #DFD0B8;
     padding: 0.8em 2em;
@@ -438,6 +437,8 @@ img.img-fluid {
 
 /* Efek Hover pada Tombol */
 .carousel .btn-primary:hover {
+    transform: scale(2.0);
+    border: 2px solid #948979;
     background-color: #153448; /* Warna saat di-hover */
     color: #d4af37; /* Tetap warna teks yang sama */
 }

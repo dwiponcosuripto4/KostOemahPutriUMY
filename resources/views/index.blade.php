@@ -16,7 +16,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-overlay">
-                        <img src="{{ asset('images/fasilitas/home.jpeg') }}" class="d-block w-100" alt="Image 1">
+                        <img src="{{ asset('images/fasilitas/viewkost2.jpeg') }}" class="d-block w-100" alt="Image 1">
                     </div>
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Welcome to Kost Oemah Putri</h2>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-overlay">
-                        <img src="{{ asset('images/fasilitas/viewkost2.jpeg') }}" class="d-block w-100" alt="Image 3">
+                        <img src="{{ asset('images/fasilitas/home.jpeg') }}" class="d-block w-100" alt="Image 3">
                     </div>
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Kost Oemah Putri</h2>

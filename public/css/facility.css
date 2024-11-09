@@ -5,10 +5,91 @@
     object-fit: contain; /* Pastikan gambar tetap proporsional dalam kotak */
 }
 
+.gallery-container {
+    padding-top: 80px;
+    background-color: #dfd0b8;
+    width: 100vw;
+}
+
+.gallery-row {
+    position: relative;
+    border-radius: 10px;
+    background-image: url("../images/fasilitas/viewkost2.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Grid 2x2 pada tampilan mobile */
+@media (max-width: 576px) {
+    .gallery-grid-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Dua kolom */
+        gap: 10px; /* Jarak antar elemen lebih kecil */
+        padding: 0 15px; /* Tambahkan padding kiri dan kanan */
+    }
+
+    .gallery-col {
+        padding: 0;
+        margin: 0; /* Hilangkan margin untuk memastikan elemen lebih rapat */
+        width: 100%;
+    }
+
+    .gallery-row {
+        min-height: 800px; /* Sesuaikan dengan height video yang diinginkan */
+    }
+
+    .col-lg-6 {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 550px; /* Tambahkan height specific */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .video-facility {
+        width: auto;
+        height: 500px !important; /* Tambahkan !important untuk memastikan style ini yang digunakan */
+        max-width: 325px;
+        border-radius: 10px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .gallery-container {
+        padding-top: 2px;
+        min-height: 800px;
+    }
+}
+
+/* Overlay warna */
+.gallery-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 91, 111, 0.8);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Styling video */
+.video-facility {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .gallery-item {
     cursor: pointer;
     display: block;
     text-decoration: none;
+    margin-bottom: 9px;
 }
 
 .gallery-item:hover {
@@ -17,10 +98,46 @@
 
 .gallery-image {
     transition: transform 0.3s ease;
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .gallery-item:hover .gallery-image {
     transform: scale(1.02);
+}
+
+/* Overlay teks pada gambar terakhir */
+.overlay-text {
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.overlay-text:hover {
+    transform: scale(1.02);
+}
+
+.overlay-text span {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-text i {
+    margin-right: 5px;
 }
 
 /* Mengatur tata letak fasilitas agar lebih responsif di mobile */
@@ -46,14 +163,15 @@
 
 /* Mengatur warna background dan teks untuk elemen lain sesuai color palette */
 body {
-    background-color: #DFD0B8;
-    color: #3C5B6F;
+    background-color: #dfd0b8;
+    color: #3c5b6f;
 }
 
-.container h2, .container h4 {
+.container h2,
+.container h4 {
     color: #153448;
 }
 
 .facility-text {
-    color: #3C5B6F;
+    color: #3c5b6f;
 }

@@ -16,7 +16,7 @@ body {
 
 /* Gaya untuk navbar di halaman index saat pertama kali dibuka (sedikit transparan) */
 .navbar.navbar-index {
-    background-color: rgba(21, 52, 72, 0.85);
+    background-color: rgba(21, 52, 72);
     transition: background-color 0.3s ease;
 }
 
