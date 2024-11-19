@@ -4,7 +4,7 @@
     <!-- Carousel Section -->
     <section id="carousel" class="carousel section">
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-4"
-            style="width: 100vw; margin-left: calc(50% - 50vw);" data-bs-ride="carousel" data-bs-interval="5000">
+            style="width: 100vw; margin-left: calc(50% - 50vw);" data-bs-ride="carousel" data-bs-interval="4000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -16,7 +16,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-overlay">
-                        <img src="{{ asset('images/fasilitas/viewkost2.jpeg') }}" class="d-block w-100" alt="Image 1">
+                        <img src="{{ asset('images/fasilitas/viewkost.jpeg') }}" class="d-block w-100" alt="Image 1">
                     </div>
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Welcome to Kost Oemah Putri</h2>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-overlay">
-                        <img src="{{ asset('images/fasilitas/viewkost.jpeg') }}" class="d-block w-100" alt="Image 2">
+                        <img src="{{ asset('images/fasilitas/viewkost2.jpeg') }}" class="d-block w-100" alt="Image 2">
                     </div>
                     <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
                         <h2 class="fadeInDown">Kost Oemah Putri</h2>
@@ -66,11 +66,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 video-container">
-                    <video controls>
+                    <video autoplay muted playsinline controls>
                         <source src="videos/test.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div>
+                </div>                
                 <div class="col-lg-7">
                     <div class="text-content">
                         <h2>About Us</h2>

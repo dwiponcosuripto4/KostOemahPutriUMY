@@ -1,0 +1,130 @@
+.review-summary-section {
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #DFD0B8; /* Contoh warna latar belakang */
+}
+
+.sk-ww-google-reviews a[href*="sociablekit"] {
+    display: none !important;
+}
+
+.sk-ww-google-reviews {
+    border: 4px solid #3C5B6F; /* Atur ketebalan dan warna border */
+    border-radius: 10px; /* Sesuaikan untuk sudut melengkung jika diinginkan */
+    padding: 1rem; /* Opsional: Memberi jarak antara border dan konten dalam widget */
+}
+
+
+/* Animation for Progress Bars */
+@keyframes growProgressBar {
+    from {
+        width: 0;
+    }
+}
+
+h2 {
+    font-weight: bolder;
+    color: #3C5B6F;
+}
+
+/* Apply animation to all progress bars with .animated-bar */
+.animated-bar {
+    animation: growProgressBar 4s ease forwards;
+}
+
+.container {
+    padding-top: 40px;
+}
+
+.text-warning {
+    font-size: 1.5rem;
+}
+
+.progress-bar-container {
+    height: 10px;
+}
+
+#rating {
+    font-weight: bold;
+    font-size: 4.3rem;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #153448;
+}
+
+.card h1{
+    color: white;
+}
+
+.me-3{
+    color: white;
+}
+
+.animated-bar {
+    transition: width 1s ease;
+}
+
+.summary-background {
+     /* Contoh warna latar belakang */
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+/* Responsif untuk perangkat di bawah 600px */
+@media (max-width: 600px) {
+    .review-summary-section {
+        padding: 1rem 0;
+    }
+
+    .summary-background {
+        padding: 1rem;
+    }
+
+    /* Ukuran font untuk judul dan rating */
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #rating {
+        font-size: 3rem;
+    }
+
+    .text-warning {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .progress-bar-container {
+        height: 8px;
+    }
+
+    /* Mengatur margin dan padding untuk menyesuaikan layout di mobile */
+    .col-md-4, .col-md-8 {
+        flex: 100%; /* Set kolom menjadi lebar penuh */
+        max-width: 100%;
+        margin-bottom: 1rem; /* Tambahkan jarak antar-kolom */
+    }
+    
+    /* Atur ulang font ukuran dan padding */
+    .summary-background h1, .summary-background a {
+        font-size: 1rem;
+    }
+
+    h1.text-uppercase {
+        font-size: 1.5rem; /* Sesuaikan ukuran font */
+        text-align: center; /* Teks di tengah */
+        white-space: nowrap; /* Mencegah pemisahan teks menjadi dua baris */
+    }
+    .review-summary-section p {
+        text-align: center;
+        font-size: 0.9rem; /* Sesuaikan ukuran font jika diperlukan */
+        padding: 0 1rem; /* Tambahkan padding jika ingin ada ruang di samping */
+    }
+}

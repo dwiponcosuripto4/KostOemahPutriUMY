@@ -1,0 +1,21 @@
+.contact-info-section {
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #DFD0B8; /* Contoh warna latar belakang */
+    padding: 2rem 0;
+}
+
+.contact-info-section .card {
+    background-color: #153448; /* Warna latar belakang baru untuk kartu */
+    color: #DFD0B8; /* Warna teks menjadi putih agar kontras dengan background */
+    border-radius: 15px;
+}
+
+.card h4{
+    color: #e3ba33;
+}
+
+.mt-4{
+    color: #e3ba33;
+}

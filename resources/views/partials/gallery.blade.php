@@ -1,12 +1,12 @@
 <!-- Gallery Section -->
-<div class="container my-3 gallery-container">
+<div class="container gallery-container">
     <div class="row gx-3 gy-2 gallery-row gallery-grid-mobile">
         <!-- Overlay warna -->
         <div class="overlay"></div>
 
         <!-- Video di Sisi Kiri -->
         <div class="col-lg-6">
-            <video id="video-facility" controls class="video-facility">
+            <video id="video-facility" autoplay muted playsinline controls class="video-facility">
                 <source src="{{ URL::asset('/videos/kamar.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video tag.
             </video>

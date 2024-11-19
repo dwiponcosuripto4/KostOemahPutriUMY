@@ -132,6 +132,7 @@ html {
     object-fit: contain;
 }
 
+
 .text-content {
     align-self: center;
     flex: 1;
@@ -141,7 +142,7 @@ html {
     color: #153448; /* Warna teks yang lebih kontras */
     border: 4px solid #3C5B6F;
     border-radius: 8px;
-    background-image: url('../images/fasilitas/viewkost.jpeg');
+    background-image: url('../images/fasilitas/home.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -196,7 +197,7 @@ html {
 
 
 /* Responsivitas untuk layar kecil */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     /* Atur ulang layout menjadi vertikal */
     .description {
         flex-direction: column;
@@ -297,8 +298,6 @@ html {
     outline: 2px solid #948979;
     outline-offset: 2px;
 }
-
-
 
 .map img {
     width: 100%;

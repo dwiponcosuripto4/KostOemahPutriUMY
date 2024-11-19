@@ -1,0 +1,7 @@
+.about-us-section {
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #DFD0B8;
+}
