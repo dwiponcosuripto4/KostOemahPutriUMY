@@ -133,6 +133,7 @@
 
 /* Facility Section Wrapper */
 .facility-section {
+    overflow-x: hidden;
     width: 100vw;
     background-color: #dfd0b8;
     margin-left: calc(50% - 50vw);
