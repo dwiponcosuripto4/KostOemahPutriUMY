@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <!-- Slide ke-3 dengan video -->
-                        <div class="item" style="background-color:black">
+                        <div class="item" style="background-color:black; border-radius: 10px;">
                             <div class="work">
                                 <div class="img d-flex align-items-center justify-content-center">
                                     <video autoplay muted loop class="img-fluid" style="max-width: 100%; height: 100%;">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <!-- Slide ke-4 dengan video -->
-                        <div class="item" style="background-color:black">
+                        <div class="item" style="background-color:black; border-radius: 10px;">
                             <div class="work">
                                 <div class="img d-flex align-items-center justify-content-center">
                                     <video autoplay muted loop class="img-fluid" style="object-fit: contain">

@@ -35,6 +35,9 @@
     .col-lg-6 {
         grid-column: 1 / -1;
         width: 100%;
+        max-width: 100%; /* Pastikan tidak ada batasan lebar */
+        margin: 0; /* Hilangkan margin default */
+        padding: 0;
         height: 535px; /* Tambahkan height specific */
         display: flex;
         justify-content: center;
@@ -162,8 +165,7 @@
 }
 
 .facility-col {
-    background: linear-gradient(135deg, #1c1b1b, #4d5c4b);
-    color: #dfd0b8;
+    background: linear-gradient(220deg, #3c5b6f 20%, #153448 80%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,12 +189,11 @@
 .facility-col:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #3c5b6f;
 }
 
 .facility-col:hover .facility-icon {
-    filter: brightness(0) saturate(300%) invert(76%) sepia(40%) saturate(450%)
-        hue-rotate(10deg) brightness(90%) contrast(84%);
+    filter: brightness(0) saturate(500%) invert(76%) sepia(38%) saturate(520%)
+        hue-rotate(10deg) brightness(78%) contrast(170%);
 }
 
 .facility-col:hover .facility-text {
@@ -210,8 +211,8 @@
     width: 50px; /* Ukuran icon diperbesar */
     height: 50px;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(76%) sepia(45%) saturate(350%)
-        hue-rotate(10deg) brightness(90%) contrast(84%); /* Menghasilkan warna keemasan */
+    filter: brightness(0) saturate(500%) invert(76%) sepia(38%) saturate(520%)
+        hue-rotate(10deg) brightness(78%) contrast(160%); /* Menghasilkan warna keemasan */
 }
 
 /* Responsive styling */
@@ -289,8 +290,8 @@
 /* Styling untuk tombol */
 .btn-view-facilities {
     padding: 0.8em 1.5em;
-    background-color: #3c5b6f;
-    color: #dfd0b8;
+    background-color: #153448;
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.2rem;
     border: none;
@@ -303,21 +304,21 @@
 /* Styling untuk ikon panah di luar tombol */
 .icon-arrow {
     font-size: 1.5rem;
-    color: #3c5b6f;
+    color: #153448;
     transition: color 0.3s ease, transform 0.3s ease;
     margin-left: 0.5em; /* Menambahkan jarak antara tombol dan ikon */
 }
 
 /* Efek hover pada tombol saja */
 .btn-view-facilities:hover {
-    background-color: #153448;
-    color: #ffffff;
+    background-color: #3C5B6F;
+    color: #e3ba33;
     transform: translateY(-2px); /* Menerapkan efek angkat pada tombol */
 }
 
 /* Efek hover hanya pada ikon panah */
 .button-container:hover .icon-arrow {
-    color: #153448;
+    color: #3C5B6F;
     transform: translateX(
         5px
     ); /* Menggeser ikon panah ke kanan saat di-hover */

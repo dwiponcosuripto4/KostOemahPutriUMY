@@ -1,7 +1,7 @@
 .facility-card {
     color: white;
     border-radius: 10px;
-    background: linear-gradient(135deg, #0e1f1b, #dfd0b8);
+    background: linear-gradient(220deg, #3c5b6f 20%, #153448 80%);
     width: 150px;
     height: 150px;
     text-align: center;
@@ -16,13 +16,12 @@
     margin: 0 auto;
 }
 
-
 .facility-icon {
     width: 60px;
     height: 60px;
     transition: all 0.3s ease;
-    filter: brightness(0) saturate(300%) invert(76%) sepia(40%) saturate(450%)
-        hue-rotate(10deg) brightness(90%) contrast(84%);
+    filter: brightness(0) saturate(500%) invert(76%) sepia(38%)
+            saturate(520%) hue-rotate(10deg) brightness(78%) contrast(160%);
 }
 
 .facility-card p {
@@ -83,8 +82,8 @@
         z-index: 1;
         margin-bottom: 45px; /* Jarak antara ikon dan teks */
         transition: all 0.3s ease;
-        filter: brightness(0) saturate(300%) invert(76%) sepia(40%) saturate(450%)
-            hue-rotate(10deg) brightness(90%) contrast(84%);
+        filter: brightness(0) saturate(500%) invert(76%) sepia(38%)
+            saturate(520%) hue-rotate(10deg) brightness(78%) contrast(160%);
         animation: slideUp 0.5s ease forwards;
     }
 
@@ -145,7 +144,6 @@
         height: 50px;
     }
 
-
     .description-container p {
         font-size: 1rem;
         line-height: 1.5;
@@ -174,8 +172,8 @@
     }
 
     .price-container h4 {
+        text-align: center;
         font-size: 1.5rem;
-        color: #333;
     }
 
     .price-container ul li {
@@ -200,7 +198,7 @@
     min-height: 100vh;
     padding-top: 100px;
     position: relative; /* Agar overlay bekerja dengan baik */
-    background-image: url('../images/fasilitas/viewkost.jpeg'); /* Sesuaikan path dengan URL gambar */
+    background-image: url("../images/fasilitas/viewkost.jpeg"); /* Sesuaikan path dengan URL gambar */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -208,7 +206,7 @@
 }
 
 .harga-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -226,7 +224,12 @@
 }
 
 .row-background {
-    background-color: rgb(255, 255, 255,0.9); /* Ganti dengan warna atau background lain yang Anda inginkan */
+    background-color: rgb(
+        255,
+        255,
+        255,
+        0.9
+    ); /* Ganti dengan warna atau background lain yang Anda inginkan */
     padding: 20px; /* Tambahkan padding jika diperlukan */
     border-radius: 8px; /* Tambahkan border-radius untuk efek sudut melengkung */
 }
@@ -266,25 +269,24 @@
 }
 
 .price-container h4 {
-    font-size: 25px;   
+    font-size: 25px;
     font-weight: bold;
-    color: #DFD0B8;
+    color: #e3ba33;
     margin-bottom: -40px; /* Menghilangkan margin bawah dari h4 */
 }
 
 .price-container hr {
-    border: 0.5px solid #DFD0B8;
+    border: 0.5px solid #dfd0b8;
     margin-bottom: -40px;
 }
 
 .price-list {
-    color: #DFD0B8;
+    color: #ffffff;
     padding-left: 0;
     list-style: none;
     font-size: 0.9rem;
     line-height: 1.8;
     margin: 0;
-    
 }
 
 .price-list li {
@@ -337,15 +339,15 @@
     margin-left: calc(50% - 50vw);
     width: 100vw;
     padding-top: 5px;
-    background-color: #DFD0B8;
+    background-color: #dfd0b8;
     min-height: 80vh;
 }
 
-.payment-section h4{
+.payment-section h4 {
     font-size: 30px;
 }
 
-.payment-section p{
+.payment-section p {
     font-size: 18px;
 }
 
@@ -360,7 +362,7 @@
 }
 
 .bank-card h5 {
-    color: #DFD0B8; /* Warna judul bank */
+    color: #dfd0b8; /* Warna judul bank */
     margin-bottom: 0.5rem;
 }
 
@@ -383,4 +385,3 @@
     height: 65px;
     object-fit: contain;
 }
-

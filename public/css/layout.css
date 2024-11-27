@@ -11,7 +11,6 @@ body {
     width: 100%;
     z-index: 1000; /* Pastikan navbar selalu di atas */
     padding: 10px 0; /* Atur padding sesuai kebutuhan */
-    
 }
 
 /* Gaya untuk navbar di halaman index saat pertama kali dibuka (sedikit transparan) */
@@ -61,7 +60,6 @@ body {
     justify-content: center; /* Tambahkan ini untuk memusatkan nav-links */
     width: 100%; /* Pastikan navbar mengisi seluruh lebar */
 }
-
 
 /* Animasi untuk membuka navbar */
 @keyframes slideDown {
@@ -149,22 +147,24 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: linear-gradient(135deg, #0e1f1b, #dfd0b8);
+        background: #153448;
         width: 100%;
         gap: 20px;
         position: absolute;
-        top: 100%; 
+        top: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
         left: 0;
-        z-index: 10; 
+        z-index: 10;
     }
 
     .navbar-collapse.show .navbar-nav {
         display: flex;
         position: absolute;
         top: 120%;
-        margin-top: 50px;
+        margin-left: -16px;
+        margin-top: 20px;
+        width: 100vw;
     }
 
     .navbar-brand {
@@ -182,27 +182,30 @@ body {
     #nav-icon3 {
         margin-left: auto; /* Pastikan hamburger di kanan */
     }
+    .navbar.navbar-index.scrolled {
+        background-color: rgb(21, 52, 72);
+        transition: background-color 0.3s ease;
+    }
 }
 
 section {
     display: block;
-  }
-  
+}
+
 .navbar-nav .nav-link {
     color: #ffffff;
     transition: color 0.3s ease, transform 0.3s ease;
     font-weight: 500;
     font-size: 17px;
-    border-radius: 5px;
 }
 
 .navbar-nav .nav-link.active {
-    color: #DFD0B8 !important;
+    color: #e3ba33 !important;
     font-weight: 700;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #DFD0B8;
+    color: #dfd0b8;
     transform: scale(1.05);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -237,15 +240,30 @@ section {
 /* Footer */
 footer {
     background-color: #153448; /* Gunakan warna biru tua sesuai dengan palet */
-    color: #DFD0B8; /* Gunakan warna beige muda untuk teks agar kontras */
+    color: #dfd0b8; /* Gunakan warna beige muda untuk teks agar kontras */
     padding: 20px 0;
 }
 
 footer a {
-    color: #DFD0B8; /* Warna beige muda untuk link */
+    color: #dfd0b8; /* Warna beige muda untuk link */
     transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #948979; /* Warna aksen untuk efek hover pada link */
 }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #153448; /* Ganti dengan warna yang Anda inginkan */
+    color: #ffffff; /* Warna ikon di dalam tombol */
+    border: none; /* Hilangkan border jika tidak diperlukan */
+    border-radius: 50%; /* Jika ingin tombol berbentuk bulat */
+    width: 50px; /* Ukuran tombol */
+    height: 50px;
+    z-index: 3;
+  }
+  

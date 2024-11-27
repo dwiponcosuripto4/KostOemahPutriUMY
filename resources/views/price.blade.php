@@ -79,7 +79,7 @@
                                 </a>
                                 <a href="/contact" class="contact-link">
                                     <i class="fas fa-phone-alt me-2"></i>
-                                    Contact Kost
+                                    Contact Kost >>
                                 </a>
                             </div>
                         </div>

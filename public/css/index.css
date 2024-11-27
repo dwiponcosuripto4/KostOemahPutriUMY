@@ -44,6 +44,9 @@ html {
     padding: 0 1em;
 }
 
+.location h2{
+    font-weight: 450;
+}
 .location h2, 
 .location p {
     color: #DFD0B8; /* Sesuaikan warna teks agar kontras dengan background dan overlay */
@@ -67,7 +70,6 @@ html {
 
 .btn-booking {
     display: inline-block;
-    margin-top: 1em;
     padding: 0.8em 2em;
     font-size: 1rem;
     color: #FFFFFF;
@@ -77,6 +79,7 @@ html {
     font-weight: bold;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    margin-bottom: 1em;
 }
 
 .btn-booking:hover {
@@ -198,6 +201,12 @@ html {
 
 /* Responsivitas untuk layar kecil */
 @media (max-width: 600px) {
+    .col-lg-7 {
+        width: 100%; /* Atur lebar menjadi 100% */
+        max-width: 100%; /* Pastikan tidak ada batasan lebar */
+        margin: 0; /* Hilangkan margin default */
+        padding: 0; /* Opsional: Sesuaikan padding jika diperlukan */
+    }
     /* Atur ulang layout menjadi vertikal */
     .description {
         flex-direction: column;
@@ -262,7 +271,7 @@ html {
 .btn-view-facilities {
     padding: 0.8em 1.5em;
     background-color: #3C5B6F;
-    color: #DFD0B8;
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.2rem;
     border: none;
@@ -283,7 +292,7 @@ html {
 /* Efek hover pada tombol saja */
 .btn-view-facilities:hover {
     background-color: #153448;
-    color: #ffffff;
+    color: #e3ba33;
     transform: translateY(-2px); /* Menerapkan efek angkat pada tombol */
 }
 

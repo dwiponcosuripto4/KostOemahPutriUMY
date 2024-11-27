@@ -99,11 +99,10 @@
     <section id="location" class="location section">
         <div class="location-container">
             <h2>Location</h2>
-            <p>Ngebel, Tamantirto, Kec. Kasihan, Bantul, DIY</p>
+            <p>📍 Ngebel, Tamantirto, Kec. Kasihan, Bantul, DIY</p>
     
             <!-- Teks lokasi dan waktu tempuh -->
             <div class="location-info text-center">
-                <p>📍 Lokasi: <a href="https://maps.google.com/?q=-7.814981,110.317924" target="_blank">https://maps.google.com/?q=-7.814981,110.317924</a></p>
                 <p>Tepatnya belakang UMY hanya 3 menit dari UMY</p>
                 <ul class="location-list">
                     <li>Ke Kampus : UMY - 3 menit</li>
